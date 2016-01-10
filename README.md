@@ -3,7 +3,7 @@
 This App show the weather-forcast for 3 day.<br>
 
 
-<a href="http://upng.co.il" title="העלאת תמונות" rel="follow"><img src="http://upng.co.il/uploads/40a7e47336ac2ffaa9281e1070d8485d.png" alt="העלאת תמונות, העלאת תמונה" title="העלאת תמונות" /></a>
+<a href="http://upng.co.il" title="העלאת תמונות" rel="follow"><img src="http://upng.co.il/uploads/e51d4fc6c59226860158e70abc84968d.png" alt="העלאת תמונות, העלאת תמונה" title="העלאת תמונות" /></a>
 
 
 To download to phone:<br>
