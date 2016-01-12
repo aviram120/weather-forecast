@@ -7,7 +7,7 @@ This App show the weather-forcast for 3 day.<br>
 
 
 To download to phone:<br>
-1. download tha "RectGame.apk" file to your desktop from <a href="https://www.dropbox.com/s/r8jr58cjrhh2kxq/RectGame.apk?dl=0">here</a><br>
+1. download tha "weather-forecast.apk" file to your desktop from <a href="https://www.dropbox.com/s/rg2vbc5ib4s3xe2/weather-forecast.apk?dl=0">here</a><br>
 2. transfer the file to your android phone<br>
 3. opne the file from your android phone- and install the file(Automatically)<br>
 4. opne the app from you desktop in your phone<br>
