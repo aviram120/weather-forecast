@@ -1,7 +1,6 @@
 package com.example.aviram.ex3;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,8 +9,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.android.volley.RequestQueue;
 import com.squareup.picasso.Picasso;
 
 public class CustomAdapter extends BaseAdapter{
@@ -21,10 +18,11 @@ public class CustomAdapter extends BaseAdapter{
     private String [] tempArr;
     private String [] picArr;
     private Context context;
-
+    private final String SERVER="http://openweathermap.org/img/w/";
     private static LayoutInflater inflater=null;
 
     public CustomAdapter(Activity mainActivity, String[] prgmNameList,String[] timeList,String[] descList,String[] tempList,String[] picList) {
+    //the function get all array from main and make the listView
 
         //init array
         dateArr=prgmNameList;
@@ -37,33 +35,15 @@ public class CustomAdapter extends BaseAdapter{
 
         inflater = ( LayoutInflater )context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
-    @Override
-    public int getCount() {
-        // TODO Auto-generated method stub
-        return dateArr.length;
-    }
+    public class Holder{
+        //object-hold the Components in the layout
 
-    @Override
-    public Object getItem(int position) {
-        // TODO Auto-generated method stub
-        return position;
-    }
-
-    @Override
-    public long getItemId(int position) {
-        // TODO Auto-generated method stub
-        return position;
-    }
-
-    public class Holder
-    {
         TextView tvData;
         TextView tvTime;
         TextView tvDesc;
         TextView tvTemp;
         ImageView img;
     }
-    @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         // the function put the data from arrays to listView
 
@@ -84,9 +64,9 @@ public class CustomAdapter extends BaseAdapter{
         holder.tvDesc.setText(descArr[position]);
         holder.tvTemp.setText(tempArr[position]);
 
-        //get the icon from API server
-        String url = "http://openweathermap.org/img/w/"+picArr[position]+".png";
-        Picasso.with(context).load(url).into(holder.img);
+        //get the icon from API-server
+        String url = SERVER+picArr[position]+".png";
+        Picasso.with(context).load(url).into(holder.img);//put the icon
 
         rowView.setOnClickListener(new OnClickListener() {
             @Override
@@ -97,4 +77,14 @@ public class CustomAdapter extends BaseAdapter{
         return rowView;
     }
 
-}
+    @Override
+    public int getCount() {
+        return dateArr.length;
+    }
+    public Object getItem(int position) {
+        return position;
+    }
+    public long getItemId(int position) {
+        return position;
+    }
+}//end

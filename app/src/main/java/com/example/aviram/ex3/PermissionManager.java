@@ -1,31 +1,19 @@
 package com.example.aviram.ex3;
 
-
 import android.Manifest;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 
-
-/**
- * Created by ilandbt on 09/11/2015.
- */
 public class PermissionManager {
 
     private Activity mActivity;
-//    private View mView;
-
     private final int PERMISSION_REQUEST = 0;
     private OnPermissionListener mOnPermissionListener;
 
     public interface OnPermissionListener {
         void OnPermissionChanged(boolean permissionGranted);
     }
-
     public PermissionManager(Activity activity, OnPermissionListener onPermissionListener) {
         mActivity = activity;
         setOnPermissionListener(onPermissionListener);
@@ -41,7 +29,6 @@ public class PermissionManager {
             requestPermission();
         }
     }
-
     private void requestPermission() {
 
         // Permission has not been granted and must be requested.
@@ -60,12 +47,9 @@ public class PermissionManager {
             ActivityCompat.requestPermissions(mActivity, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_REQUEST);
         }
     }
-
     public void setOnPermissionListener(OnPermissionListener onPermissionListener){
         mOnPermissionListener = onPermissionListener;
     }
-
-
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         if (requestCode == PERMISSION_REQUEST) {
             // Request for permission.
