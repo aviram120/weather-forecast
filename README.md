@@ -14,7 +14,7 @@ To download to phone:<br>
 5.start play!<br>
 6.Enjoy!<br>
 
-This game us: ListView,GPS location<br>
+This app us: ListView,GPS location,Volley<br>
 
 Good luck<br>
 aviram
